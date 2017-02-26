@@ -40,11 +40,10 @@ rescue Exception => e
   end
 end
 
-
 printf `pwd`
-printf `ls`
+# printf `ls`
 #output = `export LD_LIBRARY_PATH=/home/vcap/clamav-0.99.2/libclamav/.libs`
-output = `curl http://clamavjava.cfapps.io/clamav-0.99.2.tar.gz > clamav.tar.gz`
-output = `tar -xvf clamav.tar.gz`
+output = `curl http://clamavjava.cfapps.io/clamav-0.99.2.tar.gz > /home/vcap/clamav.tar.gz`
+output = `tar -xvf /home/vcap/clamav.tar.gz -C /home/vcap/`
 # printf `export LD_LIBRARY_PATH=/home/vcap/clamav-0.99.2/libclamav/.libs;/home/vcap/clamav-0.99.2/clamd/clamd --config-file=/home/vcap/clamav-0.99.2/clamd.conf`
 # printf `export LD_LIBRARY_PATH=/home/vcap/clamav-0.99.2/libclamav/.libs;/home/vcap/clamav-0.99.2/clamdscan/clamdscan --config-file=/home/vcap/clamav-0.99.2/clamd.conf /home/vcap`
